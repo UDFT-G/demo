@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax_demo</title>
+</head>
+<body>
+<script type="text/javascript">
+    window.onload = function f() {
+        var mydate = new date();
+        document.getElementById('currentTime').innerText = mydate.getTime();
+    }
+
+    function loadPage() {
+    var targetURL=document.getElementById('url').value;
+    console.log(targetURL);
+    document.getElementById('iframePosition').src=targetURL;
+    }
+</script>
+<div>
+    <p>input url here:<span id="currentTime"></span></p>
+    <p>
+        <input type="text" id="url" value="">
+        <input type="button" value="submit" onclick="loadPage()">
+    </p>
+</div>
+
+<div><h3>HERE</h3>
+    <iframe style="width:100%;height: 500px"></iframe>
+</div>
+</body>
+</html>
